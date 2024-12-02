@@ -1,0 +1,22 @@
+body{
+    background-color: aliceblue;
+}
+.box{
+    position: fixed;
+    border: 2px solid black;
+}
+.foodLvl{
+    border: 2px solid black;
+    width: 100px;
+    height: 30 px;
+}
+.funLvl{
+    border: 2px solid black;
+    width: 100px;
+    height: 30 px;
+}
+.cleanlinessLvl{
+    border: 2px solid black;
+    width: 100px;
+    height: 30 px;
+}
