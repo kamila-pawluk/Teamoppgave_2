@@ -1,21 +1,26 @@
-function foodtimer() {
-    let timer = 5+Math.floor(Math.random() * 15);
+function runtimer() {
+    let timer = 50+Math.floor(Math.random() * 150);
     let max = timer;
-    model.food.max = 
-    let interval = 1000;
+    let interval = 100;
     let countdown = setInterval(() => {
-    if(timer <= 1) {
+    if(timer == 0) {
       clearInterval(countdown);
       runtimer();
     }
-      timer--;
-      model.food.timer = timer;
-      updateView();
+    model.food.timer = timer;
+    model.food.max = max;
+    if (timer <= max*0.5) {
+      model.food.progress1 = false;
+    }
+    else {
+      model.food.progress1 = true;
+    }
+    updateView();
+    timer--;
     }, interval); 
-    
-
     //clearIntervalIfGameOver
   }
+
 
 function addFood(){
 
