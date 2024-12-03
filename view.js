@@ -1,34 +1,8 @@
-function updateView(){
+function mainPageView(){
     app.innerHTML = /*HTML*/`
 
     <div id="healthBox" class="box">
-    <progress id="health" value="100" max="100"></progress>
-
-    <div class="foodLvl">
-
-    Food
-         <div id="bar1Food" class="bar"> </div>
-         <div id="bar2Food" class="bar"> </div>
-         <div id="bar3Food" class="bar"> </div>
-         <div id="bar4Food" class="bar"> </div>
-         <div id="bar5Food" class="bar"> </div>
-    </div>
-    <div class="funLvl">
-    Fun
-        <div id="bar1Fun" class="bar"> </div>
-        <div id="bar2Fun" class="bar"> </div>
-        <div id="bar3Fun" class="bar"> </div>
-        <div id="bar4Fun" class="bar"> </div>
-        <div id="bar5Fun" class="bar"> </div>
-    </div>
-    <div class="cleanlinessLvl">
-    Cleanliness
-        <div id="bar1Clean" class="bar"> </div>
-        <div id="bar2Clean" class="bar"> </div>
-        <div id="bar3Clean" class="bar"> </div>
-        <div id="bar4Clean" class="bar"> </div>
-        <div id="bar5Clean" class="bar"> </div>
-    </div>
+    
 </div>
 
 <div id="catView">
@@ -38,17 +12,47 @@ function updateView(){
 </div>
 
 <div id="buttons" class="buttons">
-    <img class= "imageButtons" src="happyCat.png" alt="" onclick="addFood()">
-    <img class= "imageButtons" src="happyCat.png" alt="" onclick="play()">
-    <img class= "imageButtons" src="happyCat.png" alt="" onclick="cleanTheRoom()">
+    <img  src="happyCat.png" alt="" onclick="addFood()">
+    <img  src="happyCat.png" alt="" onclick="play()">
+    <img  src="happyCat.png" alt="" onclick="cleanTheRoom()">
 </div>
 
     <div>
     <p>test test</p>
     <p id="counter">${model.food.timer}/${model.food.max}</p>
-    <button onclick="runtimer()">clickit</button>
-    <p id="testtest"> ${model.food.progress1} </p>
+    <p id="progressBar"></p>
+    <p id="testtest">above 40%=${model.food.progress1} </p>
+    <button onclick="runtimer()">timer </button>
+    <button onclick="giveFood()"> givefood </button>
 
+    <div class="foodProgressBar" id="foodProgressBar"></div>
     </div>
     `;
+    
 }
+
+function theGameOverView(){
+    app.innerHTML = /*HTML*/`
+    <div>
+    <h1>You loose</h1>
+        <div id="notification"></div>
+        <button onclick="mainPageView()"> RESTART </button>
+    </div>
+    `
+
+}
+
+function catDied(){
+    document.getElementById('notification').innerHTML += /*HTML*/ ` 
+    <span>"Your friend died of hunger" </span>
+    <img src="happyCat.png">
+    `;
+}
+function catMovedOut(){
+    document.getElementById('notification').innerHTML = "Your friend moved out because he was bored";
+}
+function catGotSick(){
+    document.getElementById('notification').innerHTML = "Your friend got sick because you haven't clean";
+}
+
+

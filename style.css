@@ -6,6 +6,9 @@ body{
     content:'';
     display:block;
     clear:both;
+    content:'';
+    display:block;
+    clear:both;
 }
 .foodLvl{
     border: 2px solid black;
@@ -14,9 +17,19 @@ body{
     background: green;
     display: flex;
     flex-direction: row;
+    width: 300px;
+    height: 30px;
+    background: green;
+    display: flex;
+    flex-direction: row;
 }
 .funLvl{
     border: 2px solid black;
+    width: 300px;
+    height: 30px;
+    background: green; 
+    display: flex;
+    flex-direction: row;
     width: 300px;
     height: 30px;
     background: green; 
@@ -36,8 +49,24 @@ body{
     width:20%;
 }
 
-
-.imageButtons :hover{
+.buttons{
     background-color: grey;
+    display: inline-block;
+  
+}
+
+.buttons :hover{
+    cursor: pointer;
     opacity: 30%;
+}
+.foodProgressBar {
+    
+   width: 500px;
+   height: 20px; 
+   color: red;
+   background-image: linear-gradient(to right, red, green);
+   background-size: 30vw 100%;
+   background-repeat: no-repeat;
+   transition: witdth 0.3s ease;
+   
 }
