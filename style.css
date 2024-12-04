@@ -1,72 +1,97 @@
 body{
-    background-color: aliceblue;
-}
-.box::after{
-    border: 2px solid black;
-    content:'';
-    display:block;
-    clear:both;
-    content:'';
-    display:block;
-    clear:both;
-}
-.foodLvl{
-    border: 2px solid black;
-    width: 300px;
-    height: 30px;
-    background: green;
+    background-image: url(https://i.pinimg.com/originals/b4/58/1d/b4581df9e47ce538d21555c94f75da95.gif);
     display: flex;
-    flex-direction: row;
-    width: 300px;
-    height: 30px;
-    background: green;
-    display: flex;
-    flex-direction: row;
-}
-.funLvl{
-    border: 2px solid black;
-    width: 300px;
-    height: 30px;
-    background: green; 
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    height: 30px;
-    background: green; 
-    display: flex;
-    flex-direction: row;
-}
-.cleanlinessLvl{
-    border: 2px solid black;
-    width: 300px;
-    height: 30px;
-    background: green;
-    display: flex;
-    flex-direction: row;
-}
-.bar{
-    border: 1px solid black;
-    width:20%;
-}
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 1550px;
+    align-items: center;
 
-.buttons{
-    background-color: grey;
-    display: inline-block;
-  
-}
-
-.buttons :hover{
-    cursor: pointer;
-    opacity: 30%;
-}
-.foodProgressBar {
-    
-   width: 500px;
-   height: 20px; 
-   color: red;
-   background-image: linear-gradient(to right, red, green);
-   background-size: 30vw 100%;
-   background-repeat: no-repeat;
-   transition: witdth 0.3s ease;
    
+}
+
+.progressBar{
+    width: 500px;
+    height: 25px;
+    display: flex;
+    margin-right: 100px;
+    color: rgb(26, 15, 15);
+    background-image: linear-gradient(to right, rgb(232, 163, 234), lightblue);
+    border: 1px solid black;
+
+
+}
+
+
+#catView{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    /* margin-bottom: 20px;
+    margin-left: 50px; */
+    /* border: 3px solid black; */
+    
+}
+
+.foodLvl, .funLvl, .cleanlinessLvl {
+        margin-bottom: 10px;
+        border: 10px;
+    }
+
+#catImage {
+    width: 200px;
+    height: 200px;
+}
+.catButtons {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+   }
+button{
+    background-color: lightblue;
+    color: rgb(3, 3, 13);
+    height: 35px;
+    width: 100px;
+    border-radius: 25%;
+    display: auto;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+} 
+
+#catBubble {
+    background-image: url(https://pngfre.com/wp-content/uploads/Speech-Bubble-50-1.png); 
+    background-size: 130%;
+    background-position: center;
+    color: black;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    border: 3px solid black;
+    
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+#app #notification {
+    display: flex;
+    margin: 50px;
+    font-size: 1em;
+}
+.RIP{
+    display: flex;
+    height: 200px;
+    width: 200px;    
+}
+.restartButton{
+    position: relative;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
